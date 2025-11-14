@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendEmail } from '@/app/lib/send-email';
 
 export async function POST(req: NextRequest) {
   try {
@@ -8,13 +9,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'All fields are required.' }, { status: 400 });
     }
 
-    // In a real application, you would send an email here.
-    // For now, we'll just log the data to the console.
-    console.log('Contact form submission:');
-    console.log(`Full Name: ${fullName}`);
-    console.log(`Email: ${email}`);
-    console.log(`Subject: ${subject}`);
-    console.log(`Message: ${message}`);
+    await sendEmail({
+      to: 'contact@oweleen.com', // This should be your support email
+      subject: `New Contact Form Submission: ${subject}`,
+      html: `
+        <p><strong>Name:</strong> ${fullName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `,
+    });
 
     return NextResponse.json({ message: 'Your message has been sent successfully!' }, { status: 200 });
   } catch (error) {

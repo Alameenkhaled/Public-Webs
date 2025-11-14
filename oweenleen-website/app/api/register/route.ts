@@ -1,19 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { saveRegistration } from '@/app/services/save-registration';
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email } = await req.json();
+    const { email } = await req.json();
 
-    if (!name || !email) {
-      return NextResponse.json({ message: 'Name and email are required.' }, { status: 400 });
+    if (!email) {
+      return NextResponse.json({ message: 'Email is required.' }, { status: 400 });
     }
 
-    const data = `Name: ${name}, Email: ${email}\n`;
-    const filePath = path.join(process.cwd(), 'registrations.txt');
-
-    fs.appendFileSync(filePath, data);
+    await saveRegistration(email);
 
     return NextResponse.json({ message: 'Registration successful.' }, { status: 200 });
   } catch (error) {

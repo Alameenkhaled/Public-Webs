@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Atelier - Virtual Gallery</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        @layer utilities {
+          .masonry-grid {
+            column-count: 2;
+            column-gap: 1rem;
+          }
+          .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+          }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4a5568", // Muted blue-grey for accent
+                        "background-light": "#f7f7f7", // Off-white
+                        "background-dark": "#1a1a1a", // Charcoal
+                        "text-light": "#2d3748", // Dark grey
+                        "text-dark": "#e2e8f0", // Light grey
+                        "text-subtle-light": "#718096", // Medium grey
+                        "text-subtle-dark": "#a0aec0", // Lighter grey
+                        "surface-light": "#ffffff", // White
+                        "surface-dark": "#2d3748", // Dark grey
+                    },
+                    fontFamily: {
+                        "display": ["Cormorant Garamond", "serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center justify-between p-4">
+<a href="index.html" class="flex items-center">
+<p class="font-display text-xl font-bold tracking-normal">Digital Atelier</p>
+</a>
+<div class="flex items-center justify-end">
+<button class="flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-transparent text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="sticky top-[84px] z-10 bg-background-light/80 pt-2 pb-4 backdrop-blur-sm dark:bg-background-dark/80">
+<div class="flex gap-3 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-primary px-5"><p class="text-sm font-semibold text-background-light">All</p></div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light px-5 dark:bg-surface-dark"><p class="text-sm font-medium text-text-subtle-light dark:text-text-subtle-dark">Modeling</p></div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light px-5 dark:bg-surface-dark"><p class="text-sm font-medium text-text-subtle-light dark:text-text-subtle-dark">Fine Art</p></div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light px-5 dark:bg-surface-dark"><p class="text-sm font-medium text-text-subtle-light dark:text-text-subtle-dark">Portraits</p></div>
+<div class="flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full bg-surface-light px-5 dark:bg-surface-dark"><p class="text-sm font-medium text-text-subtle-light dark:text-text-subtle-dark">Experimental</p></div>
+</div>
+</div>
+<div class="masonry-grid p-4">
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A vibrant, abstract painting of flowers in a vase with thick, textured brushstrokes in blues, reds, and yellows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmzRYMEdJPWvQAkozpSkjri9GZfeBN3vBJd7IKB7QW2T6gH3YPbtnPh7dZhsRlft_xR_pv-q8eTVboyX2BOWNTJ73Cre-7GNPTZMxTh3oJKtN-mZDRbprVpp7v5JBvHS_nJSC7BIy2oXClSU8QsguT89F_8jFwARiQDLdeaavT9Afr99qgbKspMVOLs2pA_JiPT4VMgFn0Q55b3MtglHihqSwxuQCIJuyjbgxfPetCOl8tCN-hthapX9VkNEsLH58W0x-qDNRRKAbF"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A colorful still life painting of a sunflower in a blue vase, with a palette knife and brushes nearby." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxDEPpGWFGSkUE4KWapNDxmUy19LWoOTyw7EvUEda0ILtC6gc7EDet2Z2CM4xnrvSfZQqvAkob7I2V_eA0KWkP0YZWw46Q4JkC0GBSh-RyJ4hJxJqSzEUxjGjydd35BIbRHXFhiBu6_4VzP1isSK4v_bkqTUx6L8A4DBR-QAoMIRJskgJQ7xPOJ_Iux8F3Mf9TJKWZRyfCltcjk-YZJoZyKY6SWRcGiTuaTH6dMKo-sr_L_9E1rpAGdGhAIzIm6ivrlpN_DuHqFoPC"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A close-up shot of a model's face with dramatic, artistic makeup in gold and black." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ZFD0P8dMmVdRyK1QPk1fiD2zGS3o1q_YFDklKbFKmncbjCHuwf6hjgaasypZnVVFkTxYfEjktLkRLEPex2PBzot4QjQyX9k9lqhShVmG3JF3z8fyeUKRFoeT2tQaCWK6qqUQLNXOwE-H7lMPsJaZqEZulm6QrTJEeLYUixWuzXFetXLNAH75mUAH1c8FZQzy0W2QBPzgW3qAz86MLbyvnAVus0kXMSMmvGoJU1Hk2HM0SUOhYPer1fp3Ztd74UoBXhZoKvv7mfY1"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A black and white photograph of a male model with strong features, looking thoughtfully away from the camera." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7A5AjwbNzfDmig2PxcSlj77UonopT_Y6vDF9TnGJQW-86omdxlP2rtkPeVzU_UuWrXgQRcYXonIAirnT9MJ-rjQQ4TfJhmdKbJ3gBG-Eso_c741fqrzQhKVweTvV-H4b-O0WjHp9xgcZAApUOPHoU12SvJDSWeJ5nP9sRe6ed6hVJHrPpcobKujI7lPZNDGAPNvzyfiuqJs6jtX1oNofJqzoD4cgjablfP4KPJzzRP0Jo3x0Kr-lwVU4fB4jicfxZ0N4cjFa7K2Rx"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A portrait of a woman with curly red hair, her face partially obscured by a delicate, translucent fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCjz2bfV3eUgGLoIvXnpWCH1T5PKZXOfu3sjE6r9E2bm6yLL8JeXsuU3BsvseJpOFNmRigsufmQCdDH79TU0up2LzkPMhtd_09TQjplDYhnWWv4xi15mRwnBmY0M8aV0dYoj7ktHaPqq5Z1PJk15t0AFEotHv3D3C7kT8NSRBwdmqgHpXOZUXKk8m1xSVLWC-fkm6ec4UyEKHY7ttGqo8teew3vl6s6aDpKQjYLg7WLB8Rp4AgU7EPMax3QD441nWZchCPsLM4AkE4"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="An experimental photograph with light trails and long exposure, creating an abstract cityscape." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAzjkJKeS-Y3WewYNnyUuBGkuhF9cAiyTQwmnHoiocbzDtdxz-9mDEqXZYusxNtunj_q0Z4QGFAM3jifelBlONVVyWOA_MIMYIKqZVumMFMDWRK7DDKeORLz5Z66BZoO5d_e2eyy0fR6p6jfrmhQKh_nFlngh_ckprJR51guFSyyDOdU3IM1sCGnCAdidbr4rbDlvioYedsG5IXE3gp2yDdcjmglDu84XC9Pjnjejn1K0E6BbAtsJ-adcNmxJZuOWfPGEknBiIY1mY"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A fine art sculpture of a metallic, abstract human figure against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpWOo7gw1ZuXKK0adUwGvlh49JmWdV84Z-vmh5p88HBBnxl9stT6QqfirOwxsvcCgxfnM9MjI32FLAt2NdfBPQfZu-LituMtryNaAXAr5nbusa6GgLdc38qdhkQDVumIRQ-dnttcCkv8yR9K6Tdjf_PuYSHunhsQlFTlfDYFsfZbczGn6yiOyfjN-FM8aJDLTMrZirrEXjJbhzNE2ms1zSeIKPpinnxChGEWyi-mOFM34M2zupRRRU_1FKj1Xu0fBI1pzXhjAkFa_L"/>
+</div>
+<div class="masonry-item">
+<img class="w-full rounded-lg object-cover" data-alt="A soft-focus portrait of a person smiling, with warm, natural lighting highlighting their features." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiqyGOTLrw3kKi3IkBOic5uZShXq325FswEHvm8tsX23gA9OU3bHwv5RoK4hO71tof8-YOnwVOUeNY-lCvX892Pa8AdElJxkOKCbvTO-OdteZmfF8Dw2QSqA8gnROl4zJTJ0-m69JRqb9zdICStTiYtZqQlS_TjXv5VNR68PsLihlV6qgVtuLz_j-jSH5stvOe4kBLO40EU81ECtZ58AuiWeno2wsQuEDqOWuftUuwl97JI4aEdVuNoy_idaHvEtS_XEGsYMOjcHHo"/>
+</div>
+</div>
+</main>
+<footer class="border-t border-gray-200 bg-background-light dark:border-zinc-800 dark:bg-background-dark">
+<div class="mx-auto max-w-7xl px-4 py-12">
+<div class="flex flex-col items-center gap-8">
+<p class="font-display text-2xl font-bold">Digital Atelier</p>
+<div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-600 dark:text-gray-400">
+<a class="hover:text-accent transition-colors" href="gallery.html">Gallery</a>
+<a class="hover:text-accent transition-colors" href="story.html">Artists</a>
+<a class="hover:text-accent transition-colors" href="story.html">About</a>
+<a class="hover:text-accent transition-colors" href="contact.html">Contact</a>
+</div>
+<p class="text-xs text-gray-500 dark:text-gray-500">© 2024 Digital Atelier. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
